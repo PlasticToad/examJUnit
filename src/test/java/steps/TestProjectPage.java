@@ -25,7 +25,7 @@ public class TestProjectPage extends TestProjectPageElements {
             makeScreenShot();
         } catch (AssertionFailedError e) {
             makeScreenShot();
-            Assertions.fail("Колличество задач меньше 0");
+            Assertions.fail("Версия отлична от Version 2.0");
         }
     }
     @Step("Проверить статус Сделать")
@@ -35,7 +35,7 @@ public class TestProjectPage extends TestProjectPageElements {
             makeScreenShot();
         } catch (AssertionFailedError e) {
             makeScreenShot();
-            Assertions.fail("Колличество задач меньше 0");
+            Assertions.fail("Статус задачи отличен от СДЕЛАТЬ");
         }
     }
     @Step("Проверить статус Готово")
@@ -45,12 +45,13 @@ public class TestProjectPage extends TestProjectPageElements {
             makeScreenShot();
         } catch (AssertionFailedError e) {
             makeScreenShot();
-            Assertions.fail("Колличество задач меньше 0");
+            Assertions.fail("Статус задачи отличен от ГОТОВО");
         }
     }
     @Step("Перейти к общему списку тестов")
     public static void goToAllTests() {
         open(prop.getProperty("JIRA_TEST_SPACE"));
+        makeScreenShot();
     }
     @Step("Проверить количество задач")
     public static void checkQuantity() {
@@ -71,7 +72,7 @@ public class TestProjectPage extends TestProjectPageElements {
         makeScreenShot();
     }
     @Step("Создать задачу")
-    public static void createBug() {
+    public static void createTask() {
         create.click();
         makeScreenShot();
     }
@@ -92,18 +93,18 @@ public class TestProjectPage extends TestProjectPageElements {
         makeScreenShot();
     }
     @Step("Сохранить задачу")
-    public static void saveBug() {
+    public static void saveTask() {
         createSaveBtn.click();
         makeScreenShot();
     }
     @Step("Перейти к созданой задаче")
-    public static void openCreatedBug() {
+    public static void openCreatedTask() {
         open(prop.getProperty("JIRA_MAIN"));
         lastTask.click();
         makeScreenShot();
     }
     @Step("Исполнить задачу")
-    public static void closeBug() {
+    public static void closeTask() {
         workBtn.click();
         bsDrop.click();
         doneBtn.shouldBe(visible, Duration.ofSeconds(5)).click();

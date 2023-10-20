@@ -1,7 +1,6 @@
 package steps;
 
 import elements.LoginPageElements;
-import io.qameta.allure.Step;
 
 
 public class LoginPage extends LoginPageElements {

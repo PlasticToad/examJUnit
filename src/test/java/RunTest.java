@@ -30,12 +30,12 @@ public class RunTest extends WebHooks {
     @Test
     @DisplayName("Тест создания/закрытия задачи")
     @Owner("Боробов")
-    public void createCloseBug() {
-        createBug();
+    public void createCloseTask() {
+        createTask();
         fillFields();
-        saveBug();
-        openCreatedBug();
-        closeBug();
+        saveTask();
+        openCreatedTask();
+        closeTask();
         checkStatusDone();
     }
 }
