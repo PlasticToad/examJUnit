@@ -62,7 +62,7 @@ public class TestProjectPage extends TestProjectPageElements {
             makeScreenShot();
         } catch (AssertionFailedError e) {
             makeScreenShot();
-            Assertions.fail("Колличество задач меньше 0");
+            Assertions.fail("Количество задач меньше 0");
         }
     }
     @Step("Перейти на страницу задачи TestSelenium")

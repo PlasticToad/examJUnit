@@ -13,7 +13,7 @@ import static steps.TestProjectPage.*;
 @DisplayName("Тесты с использованием JUnit")
 public class RunTest extends WebHooks {
     @Test
-    @DisplayName("Тест колличества задач")
+    @DisplayName("Тест количества задач")
     @Owner("Боробов")
     public void checkTasksQuantity() {
         goToAllTests();
